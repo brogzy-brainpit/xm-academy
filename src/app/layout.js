@@ -39,7 +39,7 @@ description: "We help ambitious individuals and business owners unlock their pot
 
 // Load fonts with next/font (recommended, no hydration issues)
 const custom = localFont({
-  src:  "./fonts/galgo.otf",
+  src:  "./fonts/Galgo.otf",
   // weight: "100 200 300 400 500 600 700 800 900",
   variable: "--font-custom",
  
