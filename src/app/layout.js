@@ -47,6 +47,7 @@ const custom = localFont({
 const body = localFont({
   src:  "./fonts/AktivGrotesk.ttf",
   variable: "--font-body",
+  // variable: "--font-body",
  
 });
 export default function RootLayout({ children }) {
