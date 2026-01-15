@@ -3,7 +3,8 @@ import {Environment,OrbitControls,ScrollControls,useGLTF, useTexture} from '@rea
 import { act, Canvas, useFrame, useLoader, useThree } from '@react-three/fiber'
 import { Box3, CylinderGeometry, MeshStandardMaterial, Vector3 } from 'three'
 import {TextureLoader} from 'three/src/loaders/TextureLoader'
-import { useInView,useMotionValue,useScroll, useSpring, useTransform,animate } from 'framer-motion'
+import { useInView,useScroll, useSpring, useTransform } from 'framer-motion'
+import { motion} from 'framer-motion-3d'
 import Section from '@/app/layout/Section'
 import GridColumn from '@/app/layout/GridColumn'
 import Heading1 from '@/app/typography/Heading1'
@@ -116,50 +117,59 @@ const smoothProgress =useSpring(progress,{stiffness:120,damping:30,mass:.2})
        </div>
   )
 }
-const Modal = ({ isInView, progress }) => {
-  const { scene } = useGLTF("/bitcoin.glb");
-  const group = useRef();
-  const model = useRef();
-  const { viewport } = useThree();
+const Modal=({isInView,progress})=>{
+  const{nodes,materials,animations,scene}= useGLTF('/bitcoin.glb')
+const mesh=useRef()
+const {viewport}=useThree()
+// console.log(viewport.width)
+// useFrame((state,delta)=>{
+// mesh.current.rotation.x+=delta*0.08
+// mesh.current.rotation.y+=delta*0.08
+// mesh.current.rotation.z+=delta*0.08
+// })
 
-  const scale = useMotionValue(0);
-  const y = useMotionValue(-0.6);
+{/* <mesh  scale={2} ref={mesh}> 
+  <cylinderGeometry args={[1,1,.15,80]}/>
+<meshStandardMaterial map={front} attach='material-0' />
+<meshStandardMaterial map={back} attach='material-1'/>
+<meshStandardMaterial map={center} attach='material-2'/>
+        </mesh> */}
 
-  useEffect(() => {
-    const targetScale =
-      viewport.width > 8
-        ? viewport.width * 0.0004
-        : viewport.width * 0.0009;
-
-    if (isInView) {
-      animate(scale, targetScale, {
+        const back=useLoader(TextureLoader, '/images/eye.jpg')
+        const front=useLoader(TextureLoader, '/images/eye.jpg')
+        const center=useLoader(TextureLoader, '/images/eye.jpg')
+return (
+<motion.group
+      initial={{
+        scale:  viewport.width > 8
+          ? viewport.width * 0.0001
+          : viewport.width * 0.0002,
+        y: -0.6,
+      }}
+      animate={
+        isInView
+          ? {
+              scale:  viewport.width > 8
+          ? viewport.width * 0.0004
+          : viewport.width * 0.0009,
+              y: 0,
+            }
+          : {}
+      }
+      transition={{
         duration: 1.3,
-        ease: [0.16, 1, 0.3, 1],
-      });
-
-      animate(y, 0, {
-        duration: 1.3,
-        ease: [0.16, 1, 0.3, 1],
-      });
-    }
-  }, [isInView, viewport.width]);
-
-  useFrame(() => {
-    if (!group.current || !model.current) return;
-
-    group.current.scale.setScalar(scale.get());
-    group.current.position.y = y.get();
-
-    model.current.rotation.y = progress.get();
-    model.current.rotation.z = progress.get();
-  });
-
-  return (
-    <group ref={group}>
-      <primitive ref={model} object={scene} />
-    </group>
-  );
-};
+        ease: [0.16, 1, 0.3, 1], // 🔥 awwwards easing
+      }}
+      scale={
+        viewport.width > 8
+          ? viewport.width * 0.0004
+          : viewport.width * 0.0009
+      }
+    >
+      <motion.primitive rotation-y={progress} rotation-z={progress}    ref={mesh} object={scene} />
+    </motion.group>
+      )
+}
 
 
 
