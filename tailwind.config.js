@@ -43,9 +43,15 @@ module.exports = {
         'para': 'clamp(18px, 1vw, 24px)',
       },
       colors:{
+         'brand-text':"#1c2218",
+        'brand-text-dark':"#f7f0bc",
         'brand-accent':"rgb(116, 97, 195)", //accent for links, hover state 
+        'brand-secondaryx':"#FDEB87", //orange best
         'brand-secondary':"#10B981", //emerald best
+        'brand-secondary':"#16a34a", //blue best  #10B981
         'brand-background':"#f7fbe2",
+        'brand-backgroundz':"#CFCFCF",
+        'brand-background-dark':"#1c2218",
       },
       fontFamily:{
         'body':["var(--font-body)", "Arial"],

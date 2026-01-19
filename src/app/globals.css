@@ -1,27 +1,131 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* .c-scrollbar {
+  display: none !important;
+}
+[data-scroll-container] {
+  overflow-y: auto !important; 
+} */
+/* 
+*{
+    scroll-behavior: smooth;
+} */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+.burger::before, .burger::after{
+    display: block;
+    position: relative;
+    content:'';
+    width:84%;
+    /* width: 20px; */
+    height:2px;
+    border-radius: 20em;
+    transition: all 0.1s;
+}
+.burger::before{
+    background-color: rgb(241, 240, 240);
+    top: -2px;
+}
+.burger::after{
+    background-color: rgb(241, 240, 240);
+
+    top: 2px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.activeBurger::before{
+    top: 1px;
+    transform: rotate(-45deg);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.activeBurger::after{
+     transform: rotate(45deg);
+
+    top: -1px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+
+.single-vimeo-background {
+  --aspect-ratio-w: 16;
+  --aspect-ratio-h: 9;
+  --parent-height: 100; /* acts like 100vh */
+  position: relative;
+  overflow: hidden;
+}
+.single-vimeo-background iframe {
+    width: 100vw;
+    height: calc(var(--aspect-ratio-h) / var(--aspect-ratio-w) * (var(--parent-height) * 1vw));
+    min-height: 130vh;
+    min-width: calc(var(--aspect-ratio-w) / var(--aspect-ratio-h) * (var(--parent-height) * 1vh));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.theme-light {
+  --brand-primary: rgb(47, 112, 193);
+  --brand-secondary: rgb(116, 97, 195);
+  --brand-alternative: rgb(19, 120, 134);
+  --background-site: rgb(249, 249, 249);
+  --background-code: rgb(244, 244, 244);
+  --text-body: rgb(54, 49, 61);
+  --text-comment: rgb(99, 94, 105);
+  --text-high-contrast: rgb(49, 49, 49);
+  --text-medium-contrast: rgb(99, 94, 105);
+  --text-low-contrast: rgb(116, 109, 118);
+  --detail-high-contrast: rgb(192, 192, 192);
+  --detail-medium-contrast: rgb(234, 234, 234);
+  --detail-low-contrast: rgb(240, 240, 242);
+  --admonition-note: rgb(46, 109, 188);
+  --admonition-warning: rgb(116, 97, 195);
+  --admonition-danger: rgb(19, 120, 134);
+  --brand-primary-rgb-value: rgb(47, 112, 193);
+  --brand-secondary-rgb-value: rgb(116, 97, 195);
+  --brand-alternative-rgb-value: rgb(19, 120, 134);
+  --background-site-rgb-value: rgb(249, 249, 249);
+  --background-code-rgb-value: rgb(244, 244, 244);
+  --text-body-rgb-value: rgb(54, 49, 61);
+  --text-comment-rgb-value: rgb(99, 94, 105);
+  --text-high-contrast-rgb-value: rgb(49, 49, 49);
+  --text-medium-contrast-rgb-value: rgb(99, 94, 105);
+  --text-low-contrast-rgb-value: rgb(116, 109, 118);
+  --detail-high-contrast-rgb-value: rgb(192, 192, 192);
+  --detail-medium-contrast-rgb-value: rgb(234, 234, 234);
+  --detail-low-contrast-rgb-value: rgb(240, 240, 242);
+  --admonition-note-rgb-value: 46, 109, 188;
+  --admonition-warning-rgb-value: 255, 196, 9;
+  --admonition-danger-rgb-value: 220, 38, 38;
+}
+.theme-dark {
+  --brand-primary: rgb(138, 180, 248);
+  --brand-secondary: rgb(193, 168, 226);
+  --brand-alternative: rgb(136, 186, 191);
+  --background-site: rgb(0, 0, 0);
+  --background-code: rgb(12, 12, 12);
+  --text-body: rgb(222, 222, 222);
+  --text-comment: rgb(170, 170, 170);
+  --text-high-contrast: rgb(230, 230, 230);
+  --text-medium-contrast: rgb(202, 202, 202);
+  --text-low-contrast: rgb(170, 170, 170);
+  --detail-high-contrast: rgb(101, 101, 101);
+  --detail-medium-contrast: rgb(25, 25, 25);
+  --detail-low-contrast: rgb(21, 21, 21);
+  --admonition-note: rgb(138, 180, 248);
+  --admonition-warning: rgb(253, 186, 116);
+  --admonition-danger: rgb(220, 38, 38);
+  --brand-primary-rgb-value: 138, 180, 248;
+  --brand-secondary-rgb-value: 193, 168, 226;
+  --brand-alternative-rgb-value: 136, 186, 191;
+  --background-site-rgb-value: 0, 0, 0;
+  --background-code-rgb-value: 12, 12, 12;
+  --text-body-rgb-value: 222, 222, 222;
+  --text-comment-rgb-value: 170, 170, 170;
+  --text-high-contrast-rgb-value: 230, 230, 230;
+  --text-medium-contrast-rgb-value: 202, 202, 202;
+  --text-low-contrast-rgb-value: 170, 170, 170;
+  --detail-high-contrast-rgb-value: 101, 101, 101;
+  --detail-medium-contrast-rgb-value: 25, 25, 25;
+  --detail-low-contrast-rgb-value: 21, 21, 21;
+  --admonition-note-rgb-value: 138, 180, 248;
+  --admonition-warning-rgb-value: 253, 186, 116;
+  --admonition-danger-rgb-value: 220, 38, 38;
 }

@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import "./mostHave.css";
 
 
 const body = localFont({
