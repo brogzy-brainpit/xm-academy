@@ -31,7 +31,7 @@ function Header() {
   return (
     <div className='fixed z-[9999] top-0 w-full '>
 
-<motion.div variants={menu} initial='closed' exit='closed' animate={isMenuOpen?'open':'closed'} className='pt-[6em] pb-4  px-5 fixed top-0 right-0 lg:w-[30em] w-full h-svh bg-brand-secondary'>
+<motion.div variants={menu} initial='closed' exit='closed' animate={isMenuOpen?'open':'closed'} className='pt-[6em] pb-4  px-5 fixed top-0 right-0 lg:w-[30em] w-full h-screen bg-brand-secondary'>
 <AnimatePresence mode='wait'>
     {isMenuOpen && 
     <div className='justify-between h-full w-full flex flex-col'>
