@@ -57,7 +57,7 @@ const Mrq2 = useMotionTemplate`
 `;
   
    const height= useTransform(scrollYProgress,[0,.65],['0%','99%'])
-    const  text= 'lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae fugit fugiat officiis minus expedita vel distinctio totam iure sit aliquam et eius quas labore non ullam veritatis reiciendis, dolores omnis.'.split(' ')
+    const  text= 'Master the art of cryptocurrency trading with guidance from experienced professionals. Our academy provides in-depth lessons, proven trading strategies, and real-world insights to help you make informed decisions in the market.'.split(' ')
   return (
   <div ref={container} className='h-[600vh] '>
       <div  className='h-screen sticky top-0 overflow-hidden  flex items-center justify-center'>
