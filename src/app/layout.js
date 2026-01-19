@@ -2,7 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import "./mostHave.css";
 import GridLines from "./components/GridLines";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 
 const body = localFont({
@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         {/* <GridLines/> */}
         {children}
       </body>
-      <Footer/>
+      {/* <Footer/> */}
     </html>
   );
 }
