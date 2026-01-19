@@ -60,7 +60,7 @@ const Mrq2 = useMotionTemplate`
     const  text= 'lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae fugit fugiat officiis minus expedita vel distinctio totam iure sit aliquam et eius quas labore non ullam veritatis reiciendis, dolores omnis.'.split(' ')
   return (
   <div ref={container} className='h-[600vh] '>
-      <div  className='h-svh sticky top-0 overflow-hidden  flex items-center justify-center'>
+      <div  className='h-screen sticky top-0 overflow-hidden  flex items-center justify-center'>
         <motion.div style={{height}} className='bg-neutral-900 w-full h-[20%] flex items-center justify-center overflow-hidden'>
 <p className='max-w-[30em] flex flex-wrap justify-center text-center font-body leading-[1.5 lg:leading-[1.3] text-heading3 text-balance  text-white'>
   {text.map((word,i)=>{
@@ -73,7 +73,7 @@ const Mrq2 = useMotionTemplate`
     const opacity= useSpring(useTransform(scrollYProgress,[start,end],[0.1,1]),{stiffness:180,damping:12})
     // const y= useSpring(useTransform(scrollYProgress,[start,end],[20,0]),{stiffness:180,damping:20})
     // const x= useSpring(useTransform(scrollYProgress,[start,end],[20,0]),{stiffness:180,damping:20})
-    return <span key={i} className='relative mr-[.5em] flex gap-2'>
+    return <span key={i} className='relative mr-[.34em] flex gap-2'>
       <motion.span style={{opacity}} className='inline-block'>{word}</motion.span>
       {/* <motion.span style={{opacity:.1,y,x}} className='absolute inline-block'>{word}</motion.span> */}
     </span>
