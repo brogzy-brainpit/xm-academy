@@ -105,7 +105,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio 
        className='[perspective:_1000px] flex
         items-center h-full div2 [backface-visibility:hidden]  border-none bg-brand-secondary' >
       <MarqueeX speed={speed1} numbers={5}   >
-        <h2 className='font-custom flex items-center justify-center gap-4 uppercase bgemerald-700 text-neutral-800 text-heading2'>
+        <h2 className='font-custom flex items-center justify-center gap-4 uppercase bgemerald-700 text-brand-text text-heading2'>
           No.1 for a reason
            <img src='/images/crypto/tron.svg' className='w-20 h-20'/>
           </h2>
@@ -131,7 +131,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio 
        className='[perspective:_1000px] flex w-full
         items-center h-full div2 [backface-visibility:hidden]  border-none bg-brand-secondary' >
       <MarqueeX speed={speed1} numbers={5}  >
-        <h2 className='font-custom flex items-center justify-center gap-4 uppercase bgemerald-700 text-neutral-800 text-heading2'>
+        <h2 className='font-custom flex items-center justify-center gap-4 uppercase bgemerald-700 text-brand-text text-heading2'>
           No.1 for a reason
            <img src='/images/crypto/tron.svg' className='w-20 h-20'/>
           </h2>
