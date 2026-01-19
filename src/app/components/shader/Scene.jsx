@@ -16,7 +16,7 @@ const smoothProgress =useSpring(progress,{stiffness:120,damping:30,mass:.2})
   const isInView = useInView(ref, { once: false, margin: '-20%' })
   return (
        <div ref={ref} className={`w-full h-[500vh]  relative `}>
-        <div className='h-svh w-full sticky top-0'>
+        <div className='h-screen w-full sticky top-0'>
 
     <Canvas
     //  camera={{position:[0,2,100],fov:65}}
