@@ -6,6 +6,7 @@ import Preloader from './components/Preloader';
 import Preloader2 from './components/Preloader2';
 import { AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
+import ScrollSplitMarquee from './components/ScrollSplitMarquee';
 
 export default function Home() {
 
@@ -42,6 +43,7 @@ useEffect(()=>{
   )}
 </AnimatePresence>
         <Landing preLoaderOut={preLoaderOut}/>
+        <ScrollSplitMarquee/>
         
     </Lenis>
     </main>
