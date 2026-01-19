@@ -9,7 +9,6 @@ function Preloader2() {
   // const loadingAt95= useTransform(loading,(v)=>Math.min(v,95))
   const loadingAt95= useTransform(loading,[0,90,100],[0,90,95])
   
-  // const x= useTransform(loading,[0,1],["0%","calc(100vw - 100%)"])
   const x= useMotionTemplate`calc(${loadingAt95}vw - ${loadingAt95}%)`
   useEffect(()=>{
 animate(loading,100,{duration:6,ease})

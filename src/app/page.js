@@ -33,7 +33,6 @@ useEffect(()=>{
       <Lenis>
  <AnimatePresence  mode="wait" onExitComplete={()=>{setPreLoaderOut(true)}}>
     {isLoading &&  <Preloader2 key={'preloader'}/>}
-     {/* <Preloader key={'preloader'}/> */}
     </AnimatePresence>
     <AnimatePresence mode="wait">
   {isLoading2 ? (
