@@ -7,7 +7,10 @@ import Preloader2 from './components/Preloader2';
 import { AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
 import ScrollSplitMarquee from './components/ScrollSplitMarquee';
-
+import dynamic from 'next/dynamic';
+const Scene = dynamic(() => import("./components/shader/Scene"), {
+  ssr: false,
+});
 export default function Home() {
 
    const [isLoading,setIsLoading]=useState(true)
@@ -44,6 +47,7 @@ useEffect(()=>{
 </AnimatePresence>
         <Landing preLoaderOut={preLoaderOut}/>
         <ScrollSplitMarquee/>
+        <Scene/>
         
     </Lenis>
     </main>
