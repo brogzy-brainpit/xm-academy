@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import "./mostHave.css";
+import GridLines from "./components/GridLines";
 
 
 const body = localFont({
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${custom.variable} ${body.variable} antialiased`}
       >
+        <GridLines/>
         {children}
       </body>
     </html>
