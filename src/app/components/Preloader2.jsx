@@ -88,7 +88,7 @@ const imgs=["/images/001.png",
   initial="initial"
   exit="exit"
   animate="enter"
-  className="mx-auto text-heading font-custom text-white flex flex-wrap text-balance max-w-[94%] lg:max-w-[38em] justify-center absolute bottom-[1em] lg:bottom-[.1em] -translate-y-[40%]"
+  className="mx-auto lg:text-heading text-[7em] font-custom text-white flex flex-wrap text-balance max-w-[94%] lg:max-w-[38em] justify-center absolute bottom-[1em] lg:bottom-[.1em] -translate-y-[40%]"
 >
 <motion.span>{Nloading}</motion.span> 
 <motion.span>%</motion.span> 
