@@ -8,6 +8,7 @@ import { AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
 import ScrollSplitMarquee from './components/ScrollSplitMarquee';
 import dynamic from 'next/dynamic';
+import FAQS from './components/FAQS';
 const Scene = dynamic(() => import("./components/shader/Scene"), {
   ssr: false,
 });
@@ -48,6 +49,7 @@ useEffect(()=>{
         <Landing preLoaderOut={preLoaderOut}/>
         <ScrollSplitMarquee/>
         <Scene/>
+        <FAQS/>
         
     </Lenis>
     </main>
