@@ -26,7 +26,7 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
          fontSize:{
-           'heading': 'clamp(2.2em, 12vw, 9em)',
+           'heading': 'clamp(4.2em, 12vw, 9em)',
            'heading2': 'clamp(38px, 8vw, 80px)',
            'heading3': 'clamp(20px, 3vw, 38px)',
            'display': 'clamp(130px, 33vw, 490px)',

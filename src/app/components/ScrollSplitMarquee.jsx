@@ -62,7 +62,7 @@ const Mrq2 = useMotionTemplate`
   <div ref={container} className='h-[600vh] '>
       <div  className='h-screen sticky top-0 overflow-hidden  flex items-center justify-center'>
         <motion.div style={{height}} className='bg-neutral-900 w-full h-[20%] flex items-center justify-center overflow-hidden'>
-<p className='max-w-[30em] flex flex-wrap justify-center text-center font-body leading-[1.5 lg:leading-[1.3] text-heading3 text-balance  text-white'>
+<p className='max-w-[26em] flex flex-wrap justify-center text-center font-body leading-[1.5 lg:leading-[1.3] text-heading3 lg:text-heading3 text-balance  text-white'>
   {text.map((word,i)=>{
     const total=text.length
     const OUT_START=.5
