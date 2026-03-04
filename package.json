@@ -22,7 +22,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-responsive": "^10.0.1",
-    "three": "^0.163.0"
+    "three": "^0.163.0",
+    "threejs-components": "^0.0.30"
   },
   "devDependencies": {
     "eslint": "^8",

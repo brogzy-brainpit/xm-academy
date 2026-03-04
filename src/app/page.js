@@ -9,6 +9,8 @@ import Header from './components/Header';
 import ScrollSplitMarquee from './components/ScrollSplitMarquee';
 import dynamic from 'next/dynamic';
 import FAQS from './components/FAQS';
+import TubesHero from './components/TubesHero';
+import LiquidHero from './components/LiquidHero';
 const Scene = dynamic(() => import("./components/shader/Scene"), {
   ssr: false,
 });
@@ -46,6 +48,8 @@ useEffect(()=>{
     <Header key="head" preLoaderOut={preLoaderOut} />
   )}
 </AnimatePresence>
+<TubesHero/>
+<LiquidHero/>
         <Landing preLoaderOut={preLoaderOut}/>
         <ScrollSplitMarquee/>
         <Scene/>
