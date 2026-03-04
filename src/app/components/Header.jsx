@@ -36,16 +36,16 @@ function Header() {
     {isMenuOpen && 
     <div className='justify-between h-full w-full flex flex-col'>
     <ul className='w-full flex1'>
-        <li className='text-[clamp(4em,_5vw,_4em)]  uppecase font-custom fontbold text-white'>
+        <li className='text-[clamp(4em,_5vw,_4em)]  uppecase font-custom fontbold text-brand-black'>
 <SlideUpText text={'Home'} initialDelay={.5}/>
         </li>
-        <li className='text-[clamp(4em,_5vw,_4em)]  uppecase font-custom fontbold text-white'>
+        <li className='text-[clamp(4em,_5vw,_4em)]  uppecase font-custom fontbold text-brand-black'>
 <SlideUpText text={'About'} initialDelay={.6}/>
         </li>
-        <li className='text-[clamp(4em,_5vw,_4em)]  uppecase font-custom fontbold text-white'>
+        <li className='text-[clamp(4em,_5vw,_4em)]  uppecase font-custom fontbold text-brand-black'>
 <SlideUpText text={'Contact'} initialDelay={.7}/>
         </li>
-        <li className='text-[clamp(4em,_5vw,_4em)]  uppecase font-custom fontbold text-white'>
+        <li className='text-[clamp(4em,_5vw,_4em)]  uppecase font-custom fontbold text-brand-black'>
 <SlideUpText text={'FAQ'} initialDelay={.8}/>
         </li>
     </ul>
@@ -163,7 +163,7 @@ function Header() {
 
         <div className=' flex justify-end pt-4 lg:col-start-11 col-span-2'>
 
-            <div onClick={()=>{setIsMenuOpen(!isMenuOpen)}} className='cursor-pointer  flex items-center shadow-xl justify-center h-[4em] w-[4em] lg:h-[3em] lg:w-[3em] rounded-full bg-brand-accent p-2 text-white'>
+            <div onClick={()=>{setIsMenuOpen(!isMenuOpen)}} className='cursor-pointer  flex items-center shadow-xl justify-center h-[4em] w-[4em] lg:h-[3em] lg:w-[3em] rounded-full bg-brand-accent p-2 text-brand-black'>
 
           <div className={`${isMenuOpen?'activeBurger':''} burger h-full w-full flex items-center justify-center flex-col`}>
             <motion.div style={{x:4}} className={`${isMenuOpen?'hidden':'block'} transition-all duration-150 w-[84%] bg-brand-secondary h-[2px] my-[2px]`}></motion.div>

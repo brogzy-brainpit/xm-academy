@@ -37,9 +37,9 @@ function ScrollSplitMarquee() {
 useMotionValueEvent(scrollYProgress,'change',(v)=>{
  
 const run=()=>{
-   if(v>.15){
+   if(v>.35){
       setFlip(true)
-  }else if(v<=.15){
+  }else if(v<=.35){
       setFlip(false)
   }
 } 
@@ -61,8 +61,8 @@ const Mrq2 = useMotionTemplate`
   return (
   <div ref={container} className='h-[600vh] '>
       <div  className='h-screen sticky top-0 overflow-hidden  flex items-center justify-center'>
-        <motion.div style={{height}} className='bg-neutral-900 w-full h-[20%] flex items-center justify-center overflow-hidden'>
-<p className='max-w-[24em] flex flex-wrap justify-center text-center font-body leading-[1.5 lg:leading-[1.3] text-heading3 lg:text-heading3 text-balance  text-white'>
+        <motion.div style={{height}} className='bg-neutral-800 w-full h-[20%] flex items-center justify-center overflow-hidden'>
+<p className='max-w-[24em] flex flex-wrap justify-center text-center font-body leading-[1.5 lg:leading-[1.3] text-heading3 lg:text-heading3 text-balance  text-brand-white'>
   {text.map((word,i)=>{
     const total=text.length
     const OUT_START=.5
@@ -81,7 +81,7 @@ const Mrq2 = useMotionTemplate`
 </p>
 
 {/* <DisplacedParagraph
- text='ddd Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio blanditiis velit labore excepturi consequuntur libero, ipsa non est laudantium aliquam laborum dicta dolores debitis vel officia voluptatem vero.' className='max-w-[30em] text-center font-custom text-heading2 text-white'>
+ text='ddd Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio blanditiis velit labore excepturi consequuntur libero, ipsa non est laudantium aliquam laborum dicta dolores debitis vel officia voluptatem vero.' className='max-w-[30em] text-center font-custom text-heading2 text-brand-white'>
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio blanditiis velit labore excepturi consequuntur libero, ipsa non est laudantium aliquam laborum dicta dolores debitis vel officia voluptatem vero.
 </DisplacedParagraph> */}
         </motion.div>
@@ -92,7 +92,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio 
         bgpurple-600 bg-brand-accent h-[50%] flex items-center justify-cente text-heading2 font-custom w-full'>
  <MarqueeX numbers={6} speed={-speed1}  className='border-none bg-gree-600' >
         <h2 className=' font-custom flex items-center justify-center gap-4
-         uppercase bgemerald-700 text-white text-heading2'>
+         uppercase bgemerald-700 text-brand-white text-heading2'>
           GET STARTED NOW 
            <img src='/images/crypto/bitcoin.svg' className='w-10 h-10'/>
            {/* Email Developer  */}
@@ -105,7 +105,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio 
        className='[perspective:_1000px] flex
         items-center h-full div2 [backface-visibility:hidden]  border-none bg-brand-secondary' >
       <MarqueeX speed={speed1} numbers={5}   >
-        <h2 className='font-custom flex items-center justify-center gap-4 uppercase bgemerald-700 text-brand-text text-heading2'>
+        <h2 className='font-custom flex items-center justify-center gap-4 uppercase bgemerald-700 text-brand-black text-heading2'>
           No.1 for a reason
            <img src='/images/crypto/tron.svg' className='w-20 h-20'/>
           </h2>
@@ -121,7 +121,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio 
         bgpurple-600 bg-brand-accent h-[50%] flex  items-center justify-cente text-heading2 font-custom w-full'>
        <MarqueeX numbers={6} speed={speed1}  className='border-none bg-gree-600' >
         <h2 className=' font-custom flex items-center justify-center gap-4
-         uppercase bgemerald-700 text-white text-heading2'>
+         uppercase bgemerald-700 text-brand-white text-heading2'>
           GET STARTED NOW 
            <img src='/images/crypto/bitcoin.svg' className='w-10 h-10'/>
           </h2>
@@ -131,7 +131,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio 
        className='[perspective:_1000px] flex w-full
         items-center h-full div2 [backface-visibility:hidden]  border-none bg-brand-secondary' >
       <MarqueeX speed={speed1} numbers={5}  >
-        <h2 className='font-custom flex items-center justify-center gap-4 uppercase bgemerald-700 text-brand-text text-heading2'>
+        <h2 className='font-custom flex items-center justify-center gap-4 uppercase bgemerald-700 text-brand-black text-heading2'>
           No.1 for a reason
            <img src='/images/crypto/tron.svg' className='w-20 h-20'/>
           </h2>

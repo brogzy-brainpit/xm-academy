@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import React, { useRef, useState } from 'react'
+import { motion, AnimatePresence, useInView } from 'framer-motion'
 import { Plus, Minus } from 'lucide-react'
 import Section from '@/app/layout/Section'
 import GridColumn from '@/app/layout/GridColumn'
 import Heading2 from '@/app/typography/Heading2'
 import Paragraph from '@/app/typography/Paragraph'
+import SlideUpText from '../effects/SlideUpText'
 
 function FAQS() {
   return (
@@ -12,16 +13,17 @@ function FAQS() {
       <Section>
         <GridColumn className='w-full'>
           <div className='col-span-full lgcol-span-7'>
-            <Heading2 className='capitalize text-brand-text text-left mb-6 font-custom'>
-              Frequently Asked Questions
+            <Heading2 className='capitalize text-brand-black text-left mb-6 font-custom'>
+           <SlideUpText once={true} margin='-30%' gap='.13em'  text={'Frequently Asked Questions'}/>
+              
             </Heading2>
             <Questions />
             <div className='my-10'>
-              <Heading2 className='capitalize text-brand-text text-left mb-2 font-custom'>
+              <Heading2 className='capitalize text-brand-black text-left mb-2 font-custom'>
 
                 still have questions?
               </Heading2>
-              <Paragraph className={'text-brand-text font-body text-para'}>
+              <Paragraph className={'text-brand-black font-body text-para'}>
                 Our team is ready to provide detailed information about our services
               </Paragraph>
                <div className="font-body my-2.5 flex max-w-fit items-center border border-brand-accent bg-brand-accent whitespace-nowrap">
@@ -66,20 +68,46 @@ const Questions = () => {
     setOpenIndex(openIndex === index ? null : index)
   }
 
+  const viewSpot=useRef(null)
+  const inView=useInView(viewSpot,{once:true,margin:'-30%'})
+  const parent={
+    initial:{},
+    enter:{
+      transition:{
+        staggerChildren:.04
+      }
+    },
+
+  }
+  const slideIn={
+   initial:{
+     x:300,
+     opacity:0,
+   },
+    enter:{
+     x:0,
+     opacity:1,
+     transition:{
+      duration:.4,
+     }
+
+   },
+
+  }
   return (
-    <div className='divide-y divide-brand-text'>
+    <motion.div ref={viewSpot} variants={parent} initial='initial' animate={inView?'enter':'initial'} exit='initial'  className='divide-y divide-brand-black overflow-hidden'>
       {QA.map(({ q, a }, i) => (
-        <div key={i} className='py-4'>
+        <motion.div variants={slideIn}  key={i} className='py-4'>
           {/* Question Row */}
           <div
             className='flex justify-between items-center cursor-pointer select-none'
             onClick={() => toggle(i)}
           >
-            <Paragraph className='font-body text-brand-text text-para font-bold'>{q}</Paragraph>
+            <Paragraph className='font-body text-brand-black text-para font-bold'>{q}</Paragraph>
             {openIndex === i ? (
-              <Minus className='w-5 h-5 text-brand-text' />
+              <Minus className='w-5 h-5 text-brand-black' />
             ) : (
-              <Plus className='w-5 h-5 text-brand-text' />
+              <Plus className='w-5 h-5 text-brand-black' />
             )}
           </div>
 
@@ -94,15 +122,15 @@ const Questions = () => {
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
                 className='overflow-hidden'
               >
-                <Paragraph className='font-body mt-3 text-brand-text opacity-80 w-[80%]'>
+                <Paragraph className='font-body mt-3 text-brand-black opacity-80 w-[80%]'>
                   {a}
                 </Paragraph>
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   )
 }
 

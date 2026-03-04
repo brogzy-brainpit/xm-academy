@@ -7,7 +7,7 @@ import { useInView,useMotionValue,useScroll, useSpring, useTransform,animate } f
 import Section from '@/app/layout/Section'
 import GridColumn from '@/app/layout/GridColumn'
 import SlideUpText from '@/app/effects/SlideUpText'
-useGLTF.preload('/bitcoin.glb')
+useGLTF.preload('/logo.glb')
 function Scene({className}) {
    const ref = useRef(null)
   const {scrollYProgress}= useScroll({target:ref,offset:['start start','end end']})
@@ -23,10 +23,10 @@ const smoothProgress =useSpring(progress,{stiffness:120,damping:30,mass:.2})
      style={{backgroundColor:'black',pointerEvents:'auto'}} >
     
     {/* <OrbitControls enablePan={false}  enableZoom={false}/> */}
-      <ambientLight intensity={2}/>
-      <directionalLight intensity={7} position={[0,4,20]}/>
+      {/* <ambientLight intensity={2}/> */}
+      <directionalLight intensity={1} position={[0,22,10]}/>
       {/* <directionalLight intensity={60} position={[5,45,200]}/> */}
-      <Environment files={'/hdri/warehouse.hdr'}/>
+      <Environment files={'/hdri/studio.hdr'}/>
     <Modal isInView={isInView} progress={smoothProgress}/>
 
     </Canvas>
@@ -116,7 +116,7 @@ const smoothProgress =useSpring(progress,{stiffness:120,damping:30,mass:.2})
   )
 }
 const Modal = ({ isInView, progress }) => {
-  const { scene } = useGLTF("/bitcoin.glb");
+  const { scene } = useGLTF("/logo.glb");
   const group = useRef();
   const model = useRef();
   const { viewport } = useThree();
@@ -127,8 +127,8 @@ const Modal = ({ isInView, progress }) => {
   useEffect(() => {
     const targetScale =
       viewport.width > 8
-        ? viewport.width * 0.0004
-        : viewport.width * 0.0009;
+        ? viewport.width * 0.010
+        : viewport.width * 0.03;
 
     if (isInView) {
       animate(scale, targetScale, {
@@ -150,7 +150,7 @@ const Modal = ({ isInView, progress }) => {
     group.current.position.y = y.get();
 
     model.current.rotation.y = progress.get();
-    model.current.rotation.z = progress.get();
+    model.current.rotation.z = progress.get()/1.5;
   });
 
   return (
