@@ -118,7 +118,7 @@ const parent = {
               strokeWidth={2} variants={itemwhite}  d="M0 0 C0.99 0.33 1.98 0.66 3 1 C3 3.31 3 5.62 3 8 C2.01 8.495 2.01 8.495 1 9 C0.67 6.03 0.34 3.06 0 0 Z "  transform="translate(429,251)"/>
           </motion.svg>
 </Link>
-           <ul>
+           <ul className='mb6 '>
             
                 <li className='my-2 text-para font-body cursor-pointer capitalize'>
                   suite A6, Third Floor, Real Tower Plaza, A.E Ekukinam Street, Abuja. Nigeria.
@@ -151,21 +151,9 @@ const parent = {
         })}
         </div>
         </div>
-       <div className='my-6 col-span-full  py-6 border-t border-gray-700 flex lg:flex-row flex-col gap-4 items-center justify-between'>
+       <div className='my-4 lg:my-4 col-span-full  py-6 border-t border-gray-700 flex lg:flex-row flex-col gap-4 items-center justify-between'>
 
-        <div className='flex-1 flex gap-2 capitalize font-body'>
-         all rights reserved  &copy; byMemet {new Date().getFullYear()}
-        </div>
-        <div className='flex-1 flex justify-center gap-2'>
-        <img src={'/payment/visa.png'} className='w-9 invert'/>
-        <img src={'/payment/mastercard.png'} className='w-9 invert'/>
-        <img src={'/payment/paypal.png'} className='w-9 invert'/>
-        <img src={'/payment/cash.png'} className='w-9 invert'/>
-          
-         
-
-        </div>
-         <div className='flex-1 flex lg:justify-end justify-center gap-2'>
+         <div className='flex-1 flex  gap-2'>
         
           <Instagram fillRule='nonzero' className=' cursor-pointer w-6 h-6'/>
           
@@ -174,13 +162,21 @@ const parent = {
           < Twitter className='cursor-pointer w-6 h-6'/>
 
         </div>
+        <div className='flex-1 flex gap-2 text-center justify-center capitalize font-body'>
+         all rights reserved  &copy; {new Date().getFullYear()}
+        </div>
+        <div className='flex-1 lg:justify-end justify-center flex  gap-2'>
+        <img src={'images/payment/visa.png'} className='w-9 invert'/>
+        <img src={'images/payment/mastercard.png'} className='w-9 invert'/>
+        <img src={'images/payment/paypal.png'} className='w-9 invert'/>
+        <img src={'images/payment/cash.png'} className='w-9 invert'/>
+        </div>
 
        </div>
        </GridColumn>
       </Section>
       </div>
-
-    </MatterJS>
+</MatterJS>
   )
 }
 

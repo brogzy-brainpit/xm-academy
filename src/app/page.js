@@ -11,6 +11,7 @@ import dynamic from 'next/dynamic';
 import FAQS from './components/FAQS';
 import TubesHero from './components/TubesHero';
 import LiquidHero from './components/LiquidHero';
+import Swiper from './components/Swiper';
 const Scene = dynamic(() => import("./components/shader/Scene"), {
   ssr: false,
 });
@@ -53,6 +54,7 @@ useEffect(()=>{
         <Landing preLoaderOut={preLoaderOut}/>
         <ScrollSplitMarquee/>
         <Scene/>
+        <Swiper/>
         <FAQS/>
         
     </Lenis>

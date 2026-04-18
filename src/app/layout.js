@@ -48,8 +48,8 @@ export default function RootLayout({ children }) {
       >
         {/* <GridLines/> */}
         {children}
-      </body>
       <Footer/>
+      </body>
     </html>
   );
 }
