@@ -98,7 +98,7 @@ const isAccent2 = accent2Words.includes(word);
     // const x= useSpring(useTransform(scrollYProgress,[start,end],[20,0]),{stiffness:180,damping:20})
     return <span key={i} className='relative mr-[.34em] flex gap-2'>
       <motion.span style={{opacity,scale:isAccent1 || isAccent2?scale:1}} 
-       className={`inline-block leading-[1 my-[2px] align-middle ${isAccent1? "italic font-accent bg-brand-accent rounded-full px-2" :isAccent2? "italic font-accent bg-brand-secondary text-brand-black rounded-full px-2":""} `}
+       className={`inline-block leading-[1 my-[2px] align-middle ${isAccent1? " font-accent bg-brand-accent rounded-full px-2" :isAccent2? " font-accent bg-brand-secondary text-brand-black rounded-full px-2":""} `}
       >{word}</motion.span>
       {/* <motion.span style={{opacity:.1,y,x}} className='absolute inline-block'>{word}</motion.span> */}
     </span>
@@ -111,7 +111,7 @@ const isAccent2 = accent2Words.includes(word);
 </Section>
 
 {/* <DisplacedParagraph
- text='ddd Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio blanditiis velit labore excepturi consequuntur libero, ipsa non est laudantium aliquam laborum dicta dolores debitis vel officia voluptatem vero.' className='max-w-[30em] text-center font-custom italic text-[clamp(4em,_6vw,_7em)] text-brand-white'>
+ text='ddd Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio blanditiis velit labore excepturi consequuntur libero, ipsa non est laudantium aliquam laborum dicta dolores debitis vel officia voluptatem vero.' className='max-w-[30em] text-center font-custom  text-[clamp(4em,_6vw,_7em)] text-brand-white'>
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio blanditiis velit labore excepturi consequuntur libero, ipsa non est laudantium aliquam laborum dicta dolores debitis vel officia voluptatem vero.
 </DisplacedParagraph> */}
         </motion.div>
@@ -119,9 +119,9 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio 
         <motion.div style={{top:Mrq1}} className=' w-full h-[140px] border-none [clip-path:polygon(0%_0%,_100%_0%,_100%_calc(50%_+_0.53px),_0%_calc(50%_+_0.53px))]  absolute top-1/2 left-0  -translate-y-1/2 '>
       <motion.div animate={control} variants={carden} custom={1}
        className='[perspective:_1000px] [backface-visibility:hidden]  div1 absolute top-0
-        bgpurple-600 bg-brand-accent h-[50%] flex items-center justify-cente italic w-full'>
+        bgpurple-600 bg-brand-accent h-[50%] flex items-center justify-cente  w-full'>
  <MarqueeX numbers={6} speed={-speed1}  className='border-none bg-gree-600' >
-      <h2 className=' font-custom italic flex items-center justify-center gap-4
+      <h2 className=' font-custom  flex items-center justify-center gap-4
          uppercase bgemerald-700 text-brand-white text-[clamp(4em,_6vw,_7em)]'>
           {curiosity}
            <img src='/images/crypto/bitcoin.svg' className='w-10 h-10'/>
@@ -149,9 +149,9 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio 
          absolute top-1/2 left-0  -translate-y-1/2 '>
        <motion.div animate={control} variants={carden} custom={1}
        className='[perspective:_1000px] [backface-visibility:hidden]   div1 absolute bottom-0
-        bgpurple-600 bg-brand-accent h-[50%] flex  items-center justify-cente italic w-full'>
+        bgpurple-600 bg-brand-accent h-[50%] flex  items-center justify-cente  w-full'>
        <MarqueeX numbers={6} speed={speed1}  className='border-none bg-gree-600' >
-        <h2 className=' font-custom italic flex items-center justify-center gap-4
+        <h2 className=' font-custom  flex items-center justify-center gap-4
          uppercase bgemerald-700 text-brand-white text-[clamp(4em,_6vw,_7em)]'>
           {curiosity}
            <img src='/images/crypto/bitcoin.svg' className='w-10 h-10'/>
