@@ -7,7 +7,7 @@ import { useInView,useMotionValue,useScroll, useSpring, useTransform,animate } f
 import Section from '@/app/layout/Section'
 import GridColumn from '@/app/layout/GridColumn'
 import SlideUpText from '@/app/effects/SlideUpText'
-useGLTF.preload('/logo.glb')
+useGLTF.preload('/bitcoin.glb')
 function Scene({className}) {
    const ref = useRef(null)
   const {scrollYProgress}= useScroll({target:ref,offset:['start start','end end']})
@@ -23,9 +23,9 @@ const smoothProgress =useSpring(progress,{stiffness:120,damping:30,mass:.2})
      style={{backgroundColor:'black',pointerEvents:'auto'}} >
     
     {/* <OrbitControls enablePan={false}  enableZoom={false}/> */}
-      {/* <ambientLight intensity={2}/> */}
-      <directionalLight intensity={1} position={[0,22,10]}/>
-      {/* <directionalLight intensity={60} position={[5,45,200]}/> */}
+      <ambientLight intensity={2}/>
+      {/* <directionalLight intensity={1} position={[0,22,10]}/> */}
+      <directionalLight intensity={60} position={[5,45,200]}/>
       <Environment files={'/hdri/studio.hdr'}/>
     <Modal isInView={isInView} progress={smoothProgress}/>
 
@@ -116,7 +116,7 @@ const smoothProgress =useSpring(progress,{stiffness:120,damping:30,mass:.2})
   )
 }
 const Modal = ({ isInView, progress }) => {
-  const { scene } = useGLTF("/logo.glb");
+  const { scene } = useGLTF("/bitcoin.glb");
   const group = useRef();
   const model = useRef();
   const { viewport } = useThree();
@@ -127,8 +127,8 @@ const Modal = ({ isInView, progress }) => {
   useEffect(() => {
     const targetScale =
       viewport.width > 8
-        ? viewport.width * 0.010
-        : viewport.width * 0.03;
+        ? viewport.width * 0.00040
+        : viewport.width * 0.00080;
 
     if (isInView) {
       animate(scale, targetScale, {
@@ -160,41 +160,4 @@ const Modal = ({ isInView, progress }) => {
   );
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function NormalizedModel({children}){
-const ref= useRef();
-const {viewport}=useThree()
-useLayoutEffect(()=>{
-  if(!ref.current)return;
-  const box= new Box3().setFromObject(ref.current);
-  const size= new Vector3();
-  box.getSize(size);
-  const maxAsix= Math.max(size.x,size.y,size.z);
-  ref.current.scale.setScalar(1/maxAsix);
-},[viewport.width,ref.current])
-return <group scale={viewport.width/80}  ref={ref}>
-  {children}
-
-</group>
-}
 export default Scene

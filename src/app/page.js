@@ -48,8 +48,8 @@ useEffect(()=>{
     <Header key="head" preLoaderOut={preLoaderOut} />
   )}
 </AnimatePresence>
-<TubesHero/>
-<LiquidHero/>
+{/* <TubesHero/>
+<LiquidHero/> */}
         <Landing preLoaderOut={preLoaderOut}/>
         <ScrollSplitMarquee/>
         <Scene/>
