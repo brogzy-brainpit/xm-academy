@@ -80,7 +80,7 @@ const curiosity="get started now"
 <Section>
   <GridColumn>
 <div className='col-span-full lg:col-span-8 lg:col-start-3'>
-<p className='flex flex-wrap justify-center text-center font-body leading-[1.5 lg:leading-[1.4] text-heading3  text-balance  text-brand-white'>
+<p className='flex flex-wrap justify-center text-center font-body leading-[1.5 lg:leading-[1.4] text-[2em]  text-balance  text-brand-white'>
   {text.map((word,i)=>{
    
 const isAccent1 = accent1Words.includes(word);
@@ -120,19 +120,10 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita optio 
        className='[perspective:_1000px] [backface-visibility:hidden]  div1 absolute top-0
         bgpurple-600 bg-brand-accent h-[50%] flex items-center justify-cente italic w-full'>
  <MarqueeX numbers={6} speed={-speed1}  className='border-none bg-gree-600' >
-        <h2 className=' font-custom italic flex items-center justify-center gap-4
+      <h2 className=' font-custom italic flex items-center justify-center gap-4
          uppercase bgemerald-700 text-brand-white text-[clamp(4em,_6vw,_7em)]'>
-           {/* {curiosity} */}
-           i design
-    <img style={{width:"20px",height:"20px"}} className='md:block hidden opacity-30'   src="https://images.ctfassets.net/fwy0yv14lkat/5X88SBFFc4hVAjMYmFK4js/7c8ae3f8120db2ff6f7ee315d3096266/Q8.svg"/>
-      i code
-    <img style={{width:"20px",height:"20px"}} className='md:block hidden opacity-30'   src="https://images.ctfassets.net/fwy0yv14lkat/5X88SBFFc4hVAjMYmFK4js/7c8ae3f8120db2ff6f7ee315d3096266/Q8.svg"/>
-     i test
-    <img style={{width:"20px",height:"20px"}} className='md:block hidden opacity-30'   src="https://images.ctfassets.net/fwy0yv14lkat/5X88SBFFc4hVAjMYmFK4js/7c8ae3f8120db2ff6f7ee315d3096266/Q8.svg"/>
-     i fix
-    <img style={{width:"20px",height:"20px"}} className='md:block hidden opacity-30'   src="https://images.ctfassets.net/fwy0yv14lkat/5X88SBFFc4hVAjMYmFK4js/7c8ae3f8120db2ff6f7ee315d3096266/Q8.svg"/>
-
-           {/* Email Developer  */}
+          {curiosity}
+           <img src='/images/crypto/bitcoin.svg' className='w-10 h-10'/>
           </h2>
         </MarqueeX>
       </motion.div>
