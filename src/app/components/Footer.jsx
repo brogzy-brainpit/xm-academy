@@ -40,7 +40,10 @@ function Footer() {
   },
   
 ]
-
+const parent = {
+  initial: {},
+  exit: {},
+} 
  const itemwhite= {
         initial:{
             pathLength:1,
