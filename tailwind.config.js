@@ -26,11 +26,11 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
          fontSize:{
-           'heading': 'clamp(4.2em, 12vw, 9em)',
+           'heading': 'clamp(6.2em, 12vw, 9em)',
            'heading2': 'clamp(38px, 8vw, 80px)',
            'heading3': 'clamp(1.5em, 3vw, 5em)',
            'display': 'clamp(130px, 33vw, 490px)',
-           'para': 'clamp(1em, 1vw, 1.3em)',
+           'para': 'clamp(1.2em, 1.2vw, 1.4em)',
         'button': 'clamp(14px, 3.5vw, 18px)',
       },
       lineHeight:{

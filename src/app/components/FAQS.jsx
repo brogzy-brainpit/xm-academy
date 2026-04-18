@@ -13,16 +13,16 @@ function FAQS() {
       <Section>
         <GridColumn className='w-full'>
           <div className='col-span-full lgcol-span-7'>
-            <Heading2 className='capitalize text-brand-black text-left mb-6 font-custom'>
+            <h2 className='text-heading text-brand-black text-left mb-6 font-custom'>
            <SlideUpText once={true} margin='-30%' gap='.13em'  text={'Frequently Asked Questions'}/>
               
-            </Heading2>
+            </h2>
             <Questions />
             <div className='my-10'>
-              <Heading2 className='capitalize text-brand-black text-left mb-2 font-custom'>
+              <h2 className='capitalize text-heading text-brand-black text-left mb-2 font-custom'>
 
                 still have questions?
-              </Heading2>
+              </h2>
               <Paragraph className={'text-brand-black font-body text-para'}>
                 Our team is ready to provide detailed information about our services
               </Paragraph>

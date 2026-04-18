@@ -161,11 +161,11 @@ const Swiper = () => {
       <Section >
         <GridColumn>
       <div className='  col-span-full lg:col-span-4  h-full flex flex-col items-start justify-center'>
-        <h2 className='text-heading text-left text-black font-custom capitalize leading-[.8]'>
-      <SlideUpText once={false} preLoaderOut text={'from'}/>
+        <h2 className='text-heading text-left text-black font-custom  leading-[.8]'>
+      <SlideUpText once={false} preLoaderOut text={'From'}/>
              </h2>
-        <h2 className='text-heading text-left text-black font-custom uppercase leading-[.8]'>
-      <SlideUpText once={false} preLoaderOut text={'our students'}/>
+        <h2 className='text-heading text-left text-black font-custom  leading-[.8]'>
+      <SlideUpText once={false} preLoaderOut text={'Our Students'}/>
       </h2>
         <p className='text-para font-body font-medium text-black mt-[4vw] w-[90%]'>
            <SlideUpText once={false} delay={.002} preLoaderOut
@@ -179,7 +179,7 @@ const Swiper = () => {
           {slidesData.map((slide, index) => {
             return <div
               key={index}
-              className={`shrink-0 pointer-events-none  w-[12em] h-[16em] lg:w-[20em] lg:h-[30em] rounded-[2vw] flex flex-col justify-between p-[2vw] ${index < slidesData.length -1 ? 'mr-[1vw]' : ''}`}
+              className={`shrink-0 pointer-events-none  w-[16em] h-[25em] lg:w-[20em] lg:h-[30em] rounded-[2vw] flex flex-col justify-between p-[2vw] ${index < slidesData.length -1 ? 'mr-[1vw]' : ''}`}
               style={{
                 backgroundColor: slide.color,
                 border: '2px solid rgba(0, 0, 0, 0.6)'
